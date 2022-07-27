@@ -60,9 +60,8 @@ public class App {
             if (distance - (gasolineInTank * 100 / choosenCarAverageUsage) <= 0) {
                 System.out.printf("The gas in the tank is enough for %s. You do not have to pay for anything.\n",
                         choosenCarName);
-                System.out.printf("The gas left in the tank for %s is %.3f liter.\n", choosenCarName,
-                        gasolineInTank + ((distance - (gasolineInTank * 100 / choosenCarAverageUsage))
-                                * choosenCarAverageUsage / 100));
+                System.out.printf("The gas left in the tank of %s is %.1f liter.\n", choosenCarName,
+                        gasolineInTank - (distance * choosenCarAverageUsage / 100));
             } else {
                 System.out.printf("Total price that trip will cost for %s > %.2f\n", choosenCarName,
                         (((distance - (gasolineInTank * 100 / choosenCarAverageUsage)) * choosenCarAverageUsage / 100)
